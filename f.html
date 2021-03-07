@@ -15,26 +15,45 @@
 <nav id="navbar" class="nav">
     <ul class="nav-list">
         <li>
-            <a href="#welcome-section">About</a>
+            <a href="#welcome-section">Problem statements</a>
         </li>
         <li>
-            <a href="#projects">Work</a>
+            <a href="#projects">Helpline</a>
         </li>
         <li>
             <a href="#contact">Contact</a>
         </li>
     </ul>
 </nav>
-    <h2 style="float: right;margin-top: 10%">Sri Krishna Arts and Science College</h2>
-    <h1 style="color: white;margin-top: 20% ">Hack OverFlow </h1>
-<img src="logo.png">
-<div id="timer" style="margin-top: 20%">
+<marquee width="100%" direction="left" height="100px" style="margin-top:15%">
+    <a href="https://dharsh03.github.io/Bingeflix.github.io/">Rules and Regulation.</a>
+</marquee>
+<img src="skasc.jpeg" style="width:15%;height:15%;margin-top:10px;margin-left:45%;">
+<h2 style="float: right;margin-top: 10%;text-align: center;">Sri Krishna Arts and Science College</h2>
+<h4 style="color: white;margin-top: 20%;text-align: center;">Kuniyamuthur, Coimabtore </h4>
+<h2 style="color: white;margin-top: 20%;text-align: center;">Hack OverFlow </h2>
+<img src="logo.png" style="text-align: center">
+<div id="timer">
     <div id="days"></div>
     <div id="hours"></div>
     <div id="minutes"></div>
     <div id="seconds"></div>
 </div>
 
+</section>
+<section style="background: #be3144;width: 100%">
+<br><H1>PROBLEM STATEMENT</H1><br><br><br><br><br><br><br>
+
+    <div class="moving-zone">
+        <div class="popup">
+            <div class="popup-content">
+                <div class="popup-text">
+                    PROBLEM STATEMENT ARE<b>RELEASED</b>ON<br/>
+                    MARCH  <b>19</b>!
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 </body>
@@ -68,4 +87,61 @@
 
     setInterval(function() { makeTimer(); }, 1000);
 </script>
+<SCRIPT>
+    var moveForce = 30; // max popup movement in pixels
+    var rotateForce = 20; // max popup rotation in deg
+
+    $(document).mousemove(function(e) {
+        var docX = $(document).width();
+        var docY = $(document).height();
+
+        var moveX = (e.pageX - docX/2) / (docX/2) * -moveForce;
+        var moveY = (e.pageY - docY/2) / (docY/2) * -moveForce;
+
+        var rotateY = (e.pageX / docX * rotateForce*2) - rotateForce;
+        var rotateX = -((e.pageY / docY * rotateForce*2) - rotateForce);
+
+        $('.popup')
+            .css('left', moveX+'px')
+            .css('top', moveY+'px')
+            .css('transform', 'rotateX('+rotateX+'deg) rotateY('+rotateY+'deg)');
+    });
+</SCRIPT>
+
+<section id="contact" class="contact-section">
+    <div class="contact-section-header">
+        <h2>Let's work together...</h2>
+        <p>Here an Helpline for you 24/7</p>
+    </div>
+    <div class="contact-links">
+       <!-- <a
+                href="https://facebook.com/freecodecamp"
+                target="_blank"
+                class="btn contact-details"
+        ><i class="fab fa-facebook-square"></i> Facebook</a
+        >
+        <a
+                id="profile-link"
+                href="https://github.com/freecodecamp"
+                target="_blank"
+                class="btn contact-details"
+        ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a
+                href="https://twitter.com/freecodecamp"
+                target="_blank"
+                class="btn contact-details"
+        ><i class="fab fa-twitter"></i> Twitter</a
+        >-->
+        <a href="mailto:mohamedalia19bit128@skasc.ac.in" class="btn contact-details"
+        ><i class="fas fa-at"></i> Send a mail</a
+        >
+        <a href="tel:9629794425" class="btn contact-details"
+        ><i class="fas fa-mobile-alt"></i> Call me</a
+        >
+    </div>
+</section>
+<SECTION class="contact">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdiLHKTENQruIE5gd0sRR8_bNiy5Gd0npPbv2zr3B7_y_4CjQ/viewform?embedded=true" width="640" height="820" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</SECTION>
 </html>
